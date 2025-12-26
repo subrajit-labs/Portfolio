@@ -1,13 +1,33 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Helmet } from "react-helmet-async";
+import Navigation from "@/components/Navigation";
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import SkillsSection from "@/components/SkillsSection";
+import EducationSection from "@/components/EducationSection";
+import ContactSection from "@/components/ContactSection";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      <Helmet>
+        <title>Subrajit Paul | Solution-Oriented Professional</title>
+        <meta
+          name="description"
+          content="Subrajit Paul - Solution-Oriented Professional with Entrepreneurial Vision. Driving growth through smart execution and turning ideas into action."
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://subrajitpaul.com" />
+      </Helmet>
+
+      <main className="relative">
+        <Navigation />
+        <HeroSection />
+        <AboutSection />
+        <SkillsSection />
+        <EducationSection />
+        <ContactSection />
+      </main>
+    </>
   );
 };
 
