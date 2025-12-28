@@ -1,4 +1,5 @@
-import { ArrowDown, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
+import profilePicture from "@/assets/profile-picture.jpg";
 
 const HeroSection = () => {
   const stats = [
@@ -129,17 +130,15 @@ const HeroSection = () => {
                 <div className="w-full h-full rounded-full bg-background" />
               </div>
               
-              {/* Main circle with glassmorphism */}
-              <div className="absolute inset-12 rounded-full bg-gradient-to-br from-charcoal via-charcoal-light to-charcoal overflow-hidden shadow-2xl shadow-charcoal/30">
-                {/* Inner glow */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-gold/20 via-transparent to-accent/20" />
-                
-                {/* Initials */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-7xl font-bold bg-gradient-to-br from-ivory via-champagne to-gold-light bg-clip-text text-transparent">
-                    SP
-                  </span>
-                </div>
+              {/* Profile picture with circular mask */}
+              <div className="absolute inset-12 rounded-full overflow-hidden shadow-2xl shadow-charcoal/30 ring-4 ring-gold/20">
+                <img 
+                  src={profilePicture} 
+                  alt="Subrajit Paul" 
+                  className="w-full h-full object-cover"
+                />
+                {/* Overlay glow */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-gold/10 via-transparent to-accent/10 pointer-events-none" />
               </div>
               
               {/* Floating elements */}
