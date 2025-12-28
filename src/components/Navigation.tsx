@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,12 +47,15 @@ const Navigation = () => {
           ))}
         </div>
 
-        <a
-          href="mailto:paulsubrajit2@gmail.com"
-          className="text-sm font-medium text-foreground border-b border-foreground pb-0.5 hover:border-accent hover:text-accent transition-colors duration-300"
-        >
-          Get In Touch ↗
-        </a>
+        <div className="flex items-center gap-4">
+          <ThemeToggle />
+          <a
+            href="mailto:paulsubrajit2@gmail.com"
+            className="text-sm font-medium text-foreground border-b border-foreground pb-0.5 hover:border-accent hover:text-accent transition-colors duration-300"
+          >
+            Get In Touch ↗
+          </a>
+        </div>
       </div>
     </nav>
   );

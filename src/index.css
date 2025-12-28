@@ -87,12 +87,13 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border transition-colors duration-300;
   }
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-family: 'Sora', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   html {
